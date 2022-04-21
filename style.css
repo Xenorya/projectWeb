@@ -110,6 +110,17 @@ ul li a:hover{
     transition: 0.2s ease;
     cursor: pointer;
 }
+
+.error{
+    background: #e0e0e0;
+    color: #df1b17;
+    padding: 0px;
+    width: 100%;
+    font-size: 20px;    
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
 .btn:hover{
     color: #000;
 }
@@ -273,6 +284,7 @@ ul li a:hover{
 .icons ion-icon:hover{
     color: #ff7200;
 }
+
 
 
 @media screen and (max-width:1200px) {

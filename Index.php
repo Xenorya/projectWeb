@@ -51,12 +51,19 @@
 
                 <div class="form">
                     <h2>Login Here</h2>
-                    <input type="text" name="username" placeholder="Enter Email Here">
+                    <?php if (isset($_GET['error'])) { ?>
+     		        <p class="error"><?php echo $_GET['error']; ?></p>
+     	            <?php } ?>
+                    <input type="text" name="uname" placeholder="Enter Email Here">
                     <input type="password" name="password" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="#">Login</a></button>
+                    <button ref="login.php" class="btnn"><a href="#">Login</a></button>
+
+                    <form action="login.php" method="post">
+     	        
+                </form>
 
                     <p class="link">Don't have an account<br>
-                    <a href="login.php">Sign up </a> here</a></p>
+                    <a href="signup.php">Sign up </a> here</a></p>
                     
 
                 </div>
