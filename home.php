@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Planner4u - Home</title>
+    <link rel="icon" href="logo2.png" type="image/icon type">
 
 
     <!-- Bootstrap core CSS -->
@@ -18,7 +19,7 @@
         -moz-user-select: none;
         user-select: none;
       }
-
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -34,10 +35,10 @@
     <div class="navbar">
 
         <div class="icon">
-            <img src="logo2.png" class="logo2">
+            <img src="P4u.png" class="logo2">
         </div>  
         <div class="icon">
-            <h2 class="logo">Planner4U</h2>
+            <h2 class="logo"></h2>
         </div>
 
         <div class="menu">
