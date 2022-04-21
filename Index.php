@@ -51,8 +51,8 @@
 
                 <div class="form">
                     <h2>Login Here</h2>
-                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter Email Here">
-                    <input type="password" id="password" class="form-control" name="password" placeholder="Enter Password Here">
+                    <input type="text" name="username" placeholder="Enter Email Here">
+                    <input type="password" name="password" placeholder="Enter Password Here">
                     <button class="btnn"><a href="#">Login</a></button>
 
                     <p class="link">Don't have an account<br>
