@@ -2,8 +2,29 @@
     margin: 0;
     padding: 0;
 }
-
-
+.SERVICE
+{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.aboutcss 
+{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.contact
+{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;}
 .main{
     width: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(BG1.jpg);
@@ -13,10 +34,10 @@
 }
 
 .logo2{
-    width: 90px;
+    width: 150px;
     position: absolute;
-    top: 0%;
-    left: 7%;
+    top: -3%;
+    left: 6%;
 }
 
 
