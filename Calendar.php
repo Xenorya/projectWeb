@@ -73,8 +73,8 @@ class Calendar {
 
 }
 
-
-$date='2021-02-02';
+date_default_timezone_set("Africa/Tunis");
+@$date=date();
 $calendar = new Calendar($date);
 $calendar->add_event('Birthday', '2021-02-03', 1, 'green');
 ?>
