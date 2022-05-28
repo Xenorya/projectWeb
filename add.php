@@ -34,19 +34,18 @@
     <div class="navbar">
 
         <div class="icon">
-            <img src="logo2.png" class="logo2">
+            <img src="p4u.png" class="logo2">
         </div>  
         <div class="icon">
-            <h2 class="logo">Planner4U</h2>
+            <h2 class="logo"></h2>
         </div>
 
         <div class="menu">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+            <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="SERVICE.html">SERVICE</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
         </div>
         
 
