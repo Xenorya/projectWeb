@@ -2,26 +2,32 @@
     margin: 0;
     padding: 0;
 }
+.ABOUT
+{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
 .SERVICE
 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 .aboutcss 
-{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
-    background-position: center;
-    background-size: cover;
+{ 
+  text-align: left;
     height: 100vh;
+    font-size: 1.2em;
 }
-.contact
+.CONTACT
 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;}
@@ -33,42 +39,42 @@
     height: 100vh;
 }
 
-.logo2{
-    width: 150px;
-    position: absolute;
-    top: -3%;
-    left: 6%;
-}
+    .logo2{
+        width: 150px;
+        position: absolute;
+        top: -3%;
+        left: 6%;
+    }
 
 
 
-.navbar{
-    width: 1500px;
-    height: 75px;
-    margin: auto;
-}
+    .navbar{
+        width: 1500px;
+        height: 75px;
+        margin: auto;
+    }
 
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
+    .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+    }
 
-.logo{
-    color: #ff7200;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 0px;
-    float: left;
-    padding-top: 10px;
-    margin-top: 5px
-}
+    .logo{
+        color: #ff7200;
+        font-size: 35px;
+        font-family: Arial;
+        padding-left: 0px;
+        float: left;
+        padding-top: 10px;
+        margin-top: 5px
+    }
 
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-}
+    .menu{
+        width: 400px;
+        float: left;
+        height: 70px;
+    }
 
 ul{
     float: left;
@@ -355,6 +361,7 @@ ul li a:hover{
     .content a{
         font-size: 1.6vw
     }
+  
 }
 
 @media screen and (max-width:1170px) {
@@ -538,3 +545,8 @@ ul li a:hover{
     } 
 
 }
+.ps{
+   font-size: 20PX;
+ 
+
+} 
