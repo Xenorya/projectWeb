@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Planner4u - Home</title>
     <link rel="icon" href="logo2.png" type="image/icon type">
+   
 
 
     <!-- Bootstrap core CSS -->
@@ -55,16 +56,33 @@
     </div> 
 </header>
 
-<main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Quote of the moment</h1>
-        <p class="lead text-muted">xxxxx</p>
+
+ <div class="main">
+    <div class="containerr " >
+      
+      <div class="header">
+        <h2> TodayQuote </h2>
       </div>
+  
+      <div class="main-content">
+       
+        <div class="text-area">
+          <span class="quote">"Life is what happens when you're busy making other plans"</span>
+        </div>
+        
+        <div class="writer">– John Lennon</div>
+  
+        <div class="button-area">  
+          <div class="btn1">
+            <button id="Qbtn">New Quotes</button>
+          </div>
+        </div>
+        
+      </div>
+  
     </div>
-  </section>
+    </div>
 
   <?php
     $servername = "localhost";
@@ -114,11 +132,11 @@
   </div>
   
 
-</main>
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
 
-      
+    <script src="custom.js"></script>
+
   </body>
 </html>

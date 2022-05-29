@@ -36,16 +36,18 @@
     <div class="navbar">
 
         <div class="icon">
-            <img src="P4u.png" class="logo2">
-        </div> 
+            <img src="p4u.png" class="logo2">
+        </div>  
+        <div class="icon">
+            <h2 class="logo"></h2>
+        </div>
 
         <div class="menu">
             <ul>
-                <li><a href="home.php">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+            <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="SERVICE.html">SERVICE</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
         </div>
         
 
