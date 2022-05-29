@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Planner4u - Home</title>
+    <title>Planner4u - View</title>
     <link rel="icon" href="logo2.png" type="image/icon type">
-   
+
 
 
     <!-- Bootstrap core CSS -->
@@ -20,7 +20,7 @@
         -moz-user-select: none;
         user-select: none;
       }
-      
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -37,8 +37,8 @@
 
         <div class="icon">
             <img src="P4u.png" class="logo2">
-        </div>
-
+        </div>  
+    
         <div class="menu">
             <ul>
                 <li><a href="home.php">HOME</a></li>
@@ -47,20 +47,18 @@
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </div>
-        
 
-        <form action="search.php" target="_blank">
+        <form method="post">
         
         <div class="search">
-            <input class="btn" type="submit" name="submit" value="search page">
+            <input class="srch" type="text" name="search" placeholder="Type To text">
+             <input class="btn" type="submit" name="submit">
         </div>
         </form>
     </div> 
-</header>
-
-
-
- <div class="main">
+    </header>
+	
+    <div class="main">
     <div class="containerr " >
       
       <div class="header">
@@ -85,30 +83,33 @@
   
     </div>
     </div>
-
-  <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=login", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   
+   <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      try {
+        $con = new PDO("mysql:host=$servername;dbname=login", $username, $password);
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //echo "Connected successfully";
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
-    $sql = "SELECT id,title,text,date FROM notes";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();    
-  ?>
+    if (isset($_POST["submit"])) {
+      $str = $_POST["search"];
 
-  <div class="album py-5 bg-light">
+      $sql =("SELECT * FROM `notes` WHERE title = '$str'");
+      $stmt = $con->prepare($sql);
+      $stmt -> execute();
+      ?>
+   <div class="album py-5 bg-light">
     <div class="container">
-    <center><button onclick="location.href='add.php'" type="button" class="btn btn-sm btn-outline-secondary">Add Note</button></center><br><br>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <?php while($row = $stmt->fetch()) { 
-          echo '
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+      <?php
+      if($row = $stmt->fetch())
+      { echo '
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
@@ -128,17 +129,38 @@
           </div>
         </div>
         ';
-        } ?>
-      </div>
+      ?>
+        </div>
     </div>
   </div>
-  
+        
+    <?php 
+      }
+        
+        
+        else{
+            echo "Note Does not exist go to home page";
+          
+          
+        }
+    
+      }
+    
+    
+    ?>
+
+
+
+
+
+
+
+
 
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
 
-    <script src="custom.js"></script>
-
+      
   </body>
 </html>

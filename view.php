@@ -49,10 +49,13 @@
         </div>
         
 
+       
+        <form action="search.php" target="_blank">
+        
         <div class="search">
-            <input class="srch" type="search" name="" placeholder="Type To text">
-            <a href="view.php"> <button class="btn">Search</button></a>
+            <input class="btn" type="submit" name="submit" value="search page">
         </div>
+        </form>
     </div> 
 </header>
 
