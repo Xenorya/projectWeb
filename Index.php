@@ -29,6 +29,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.php">HOME</a></li>
+                    <li><a href="index.php">LOGIN</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="SERVICE.html">SERVICE</a></li>
                     <li><a href="CONTACT.html">CONTACT</a></li>
