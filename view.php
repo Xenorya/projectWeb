@@ -41,10 +41,10 @@
     
         <div class="menu">
             <ul>
-                <li><a href="home.php">HOME</a></li>
+            <li><a href="home.php">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="SERVICE.html">SERVICE</a></li>
+                <li><a href="CONTACT.html">CONTACT</a></li>
             </ul>
         </div>
         
