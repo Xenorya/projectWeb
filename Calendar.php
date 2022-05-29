@@ -74,9 +74,38 @@ class Calendar {
 }
 
 date_default_timezone_set("Africa/Tunis");
-@$date=date();
+$date=date('Y-m-d');
+if (@$_GET['date']!=''){
+    $date=$_GET['date'];
+    $action=$_GET['action'];
+    if ($action=="Next"){
+        $date = date('Y-m-d', strtotime($date. ' + 1 month'));        
+    }else if ($action=="Prev"){
+        $date = date('Y-m-d', strtotime($date. ' - 1 month'));
+    }
+}
 $calendar = new Calendar($date);
-$calendar->add_event('Birthday', '2021-02-03', 1, 'green');
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=login", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+$sql = "SELECT id,title,text,date FROM notes WHERE date<>'0000-00-00'";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+while($row = $stmt->fetch()) {
+    $calendar->add_event($row['title'], $row['date'], 1, 'green');
+}    
+
+//$calendar->add_event('Birthday', '2021-02-03', 1, 'green');
+
 ?>
 
 <!DOCTYPE html>
@@ -88,21 +117,20 @@ $calendar->add_event('Birthday', '2021-02-03', 1, 'green');
         <link href="./css/styleHome.css" rel="stylesheet" type="text/css">
 		<link href="./css/stylecal.css" rel="stylesheet" type="text/css">
 		<link href="./css/calendar.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="logo2.png" type="image/icon type">
+
 	</head>
 	<body>
         <header>
             <div class="navbar">
 
                 <div class="icon">
-                    <img src="logo2.png" class="logo2">
+                    <img src="P4u.png" class="logo2">
                 </div>  
-                <div class="icon">
-                    <h2 class="logo">Planner4U</h2>
-                </div>
-
+               
                 <div class="menu">
                     <ul>
-                        <li><a href="#">HOME</a></li>
+                        <li><a href="home.php">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <li><a href="#">CONTACT</a></li>
@@ -112,13 +140,15 @@ $calendar->add_event('Birthday', '2021-02-03', 1, 'green');
 
                 <div class="search">
                     <input class="srch" type="search" name="" placeholder="Type To text">
-                    <a href="#"> <button class="btn">Search</button></a>
+                    <a href="view.php"> <button class="btn">Search</button></a>
                 </div>
             </div> 
         </header>
 		<div class="content home">
-			<?php echo $calendar; ?>
-		</div>
+        <?php echo $calendar;?>
+        <?php echo ' <button onclick="location.href=\'Calendar.php?action=Prev&date='. $date .'\'" type="button" class="btn btn-sm btn-outline-secondary"> < </button>
+        <button onclick="location.href=\'Calendar.php?action=Next&date='. $date .'\'" type="button" class="btn btn-sm btn-outline-secondary"> > </button>' ?>
+        </div>
         <script src="./js/bootstrap.bundle.min.js"></script>
 
 	</body>

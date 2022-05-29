@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Planner4u - Home</title>
+    <title>Planner4u - Ceate Note</title>
+    <link rel="icon" href="logo2.png" type="image/icon type">
+
 
 
     <!-- Bootstrap core CSS -->
@@ -34,15 +36,12 @@
     <div class="navbar">
 
         <div class="icon">
-            <img src="logo2.png" class="logo2">
-        </div>  
-        <div class="icon">
-            <h2 class="logo">Planner4U</h2>
-        </div>
+            <img src="P4u.png" class="logo2">
+        </div> 
 
         <div class="menu">
             <ul>
-                <li><a href="#">HOME</a></li>
+                <li><a href="home.php">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="#">SERVICE</a></li>
                 <li><a href="#">CONTACT</a></li>
@@ -52,35 +51,58 @@
 
         <div class="search">
             <input class="srch" type="search" name="" placeholder="Type To text">
-            <a href="#"> <button class="btn">Search</button></a>
+            <a href="view.php"> <button class="btn">Search</button></a>
         </div>
     </div> 
 </header>
 
 <main>
+    <?php session_start(); ?>
+    <?php
+        if(@$_POST['title']!=''){
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $title=$_POST['title'];
+            $text=$_POST['text'];
+            $reminder=$_POST['reminder'];
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">New note</h1>
-        <form method="POST" action="add.php">
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputnote">Content</label>
-            <textarea type="text" class="form-control" id="text" name="text"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleCheck1">Choose date</label>
-            <input type="date" class="form-control" id="reminder" name="reminder">
-          </div>
-          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-        </form>
-       </div>
-    </div>
-  </section>
+            try {
+                $conn = new PDO("mysql:host=$servername;dbname=login", $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = "INSERT INTO notes (title,text,date)
+                VALUES ('$title','$text','$reminder')";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+            } catch(PDOException $e) {
+                echo "Connection failed: " . $e->getMessage();
+            }
+            header('Location: home.php');
+        }
+    ?>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">New note</h1>
+          <form method="POST" action="add.php">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp"> 
+            </div>
+            <div class="form-group">
+              <label for="exampleInputnote">Content</label>
+              <textarea type="text" class="form-control" id="text" name="text"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleCheck1">Choose date</label>
+              <input type="date" class="form-control" id="reminder" name="reminder">
+            </div>
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
 
 </main>
