@@ -29,12 +29,21 @@
             <div class="menu">
                 <ul>
              
+<<<<<<< HEAD
                     <li><a href="index.php">LOGIN</a></li>
                   
                 <li><a href="about1.html">ABOUT</a></li>
                 <li><a href="SERVICES1.html">SERVICE</a></li>
                 <li><a href="CONTACT1.HTML">CONTACT</a></li>
                 
+=======
+                    <li><a href="Index.php">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="SERVICE.html">SERVICE</a></li>
+                <li><a href="CONTACT.html">CONTACT</a></li>
+                <li><a href="Calendar.php">CALENDAR</a></li>
+
+>>>>>>> f977969787f292876b4d31b683a767e901dd4fc1
                 </ul>
             </div>
             

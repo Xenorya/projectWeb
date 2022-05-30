@@ -41,12 +41,21 @@
 
         <div class="menu">
             <ul>
+<<<<<<< HEAD
             
+=======
+            <li><a href="CONTACT.php.php">HOME</a></li>
+>>>>>>> f977969787f292876b4d31b683a767e901dd4fc1
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="SERVICE.html">SERVICE</a></li>
                 <li><a href="CONTACT.html">CONTACT</a></li>
                 <li><a href="Calendar.php">CALENDAR</a></li>
+<<<<<<< HEAD
                 <li><a href="index.php">LOGOUT</a></li>
+=======
+                <li><a href="Index.php">LOGOUT</a></li>
+
+>>>>>>> f977969787f292876b4d31b683a767e901dd4fc1
 
             </ul>
         </div>
