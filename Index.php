@@ -30,11 +30,11 @@
                 <ul>
              
                     <li><a href="index.php">LOGIN</a></li>
-                    <li><a href="home.php">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="SERVICE.html">SERVICE</a></li>
-                <li><a href="CONTACT.html">CONTACT</a></li>
-                <li><a href="Calendar.php">CALENDAR</a></li>
+                  
+                <li><a href="about1.html">ABOUT</a></li>
+                <li><a href="SERVICES1.html">SERVICE</a></li>
+                <li><a href="CONTACT1.HTML">CONTACT</a></li>
+                
                 </ul>
             </div>
             
