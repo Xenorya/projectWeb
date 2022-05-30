@@ -99,7 +99,7 @@
           </div>
           <input type="hidden" id="id" name="id" value="<?= $row['id']?>">
           <button type="submit" class="btn btn-primary" name="submit">Save</button>
-          <?php echo"<button type='button' class='btn btn-sm btn-outline-secondary' onclick='delete_note.php?id=\'" .$row['id']. "'\'>Delete</a></button>"
+          <?php echo"<button type='button' class='btn btn-sm btn-outline-secondary' onclick='location.href=\"delete_note.php?id=" .$row['id']. "\"'>Delete</a></button>"
       ?></form>
        </div>
     </div>
