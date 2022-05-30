@@ -128,12 +128,7 @@ body{
   background-size: cover;
   height: 100vh;
  }
- .logo2{
-      width: 150px;
-      position: absolute;
-      top: -3%;
-      left: 6%;
-  }
+
   .form{
    border: 5px solid transparent;
    align: center;
@@ -157,6 +152,8 @@ body{
     <div class="wrapper">
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
+        <link rel="icon" href="logo2.png" type="image/icon type">
+
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Username</label>

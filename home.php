@@ -41,11 +41,14 @@
 
         <div class="menu">
             <ul>
-            <li><a href="home.php">HOME</a></li>
+            <li><a href="CONTACT.php.php">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="SERVICE.html">SERVICE</a></li>
                 <li><a href="CONTACT.html">CONTACT</a></li>
                 <li><a href="Calendar.php">CALENDAR</a></li>
+                <li><a href="Index.php">LOGOUT</a></li>
+
+
             </ul>
         </div>
         

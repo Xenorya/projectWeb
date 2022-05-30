@@ -29,12 +29,12 @@
             <div class="menu">
                 <ul>
              
-                    <li><a href="index.php">LOGIN</a></li>
-                    <li><a href="home.php">HOME</a></li>
+                    <li><a href="Index.php">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="SERVICE.html">SERVICE</a></li>
                 <li><a href="CONTACT.html">CONTACT</a></li>
                 <li><a href="Calendar.php">CALENDAR</a></li>
+
                 </ul>
             </div>
             
