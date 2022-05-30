@@ -134,6 +134,7 @@ while($row = $stmt->fetch()) {
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="SERVICE.html">SERVICE</a></li>
                 <li><a href="CONTACT.html">CONTACT</a></li>
+                <li><a href="Calendar.php">CALENDAR</a></li>
                     </ul>
                 </div>
                 
