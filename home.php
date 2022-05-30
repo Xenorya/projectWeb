@@ -61,7 +61,8 @@
 
 
 
- <div class="main">
+ <div  STyle="background-image: url('quote.jpg');" class="main">
+
     <div class="containerr " >
       
       <div class="header">
