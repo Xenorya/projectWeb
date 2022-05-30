@@ -8,11 +8,12 @@ body {
   height: 100vh;
  }
  .form{
-   border: 5px solid transparent;
+   
+   border: 5px  black;
   width: 250px;
   height: 380px;
   background: linear-gradient(to top, rgba(0,0,0,0.8) 50%,rgba(0,0,0,0.8) 50%);
-  position: absolute;
+  position: center;
   top: -20px;
   left: 870px;
   transform: translate(0%,-5%);
@@ -31,6 +32,7 @@ input{
   
   width: 220px;
   height: 35px;
+  
   background: transparent ;
   border-bottom: 1px solid #ff7200;
   border-top: none;
@@ -57,6 +59,7 @@ hr {
 
 .registerbtn {
   background-color: orange;
+  
   color: rgb(255, 255, 255);
   padding: 16px 20px;
   margin: 8px 0;

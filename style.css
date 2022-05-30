@@ -5,7 +5,7 @@
 .ABOUT
 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(boh.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -13,7 +13,7 @@
 .SERVICE
 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(boh.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -24,13 +24,7 @@
     height: 100vh;
     font-size: 1.2em;
 }
-.CONTACT
-{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(aboutbg.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;}
+
 .main{
     width: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5) 50%), url(BG1.jpg);
@@ -160,8 +154,9 @@ ul li a:hover{
     outline: none;
 }
 
+
 .content{
-    width: 1200px;
+    width: 1300px;
     height: auto;
     margin: auto;
     color: #fff;

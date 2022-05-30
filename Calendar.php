@@ -130,18 +130,22 @@ while($row = $stmt->fetch()) {
                
                 <div class="menu">
                     <ul>
-                        <li><a href="home.php">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                    <li><a href="home.php">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="SERVICE.html">SERVICE</a></li>
+                <li><a href="CONTACT.html">CONTACT</a></li>
+                <li><a href="Calendar.php">CALENDAR</a></li>
                     </ul>
                 </div>
                 
 
-                <div class="search">
-                    <input class="srch" type="search" name="" placeholder="Type To text">
-                    <a href="view.php"> <button class="btn">Search</button></a>
-                </div>
+               
+          <form action="search.php" target="_blank">
+        
+            <div class="search">
+            <input class="btn" type="submit" name="submit" value="search page">
+            </div>
+                     </form>
             </div> 
         </header>
 		<div class="content home">
